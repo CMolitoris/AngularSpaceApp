@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title = 'Welcome to you all-in-one space application!';
+  title = 'Welcome to your all-in-one space application!';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleButtonClick() {
+    console.log("Button clicked")
   }
 
 }
