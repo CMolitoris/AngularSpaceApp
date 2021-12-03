@@ -6,6 +6,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { PlanetsComponent } from './components/planets/planets.component';
 
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { PlanetItemComponent } from './components/planet-item/planet-item.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     HeaderComponent,
     ButtonComponent,
     PlanetsComponent,
-    NavBarComponent
+    NavBarComponent,
+    PlanetItemComponent
   ],
   imports: [
     BrowserModule,

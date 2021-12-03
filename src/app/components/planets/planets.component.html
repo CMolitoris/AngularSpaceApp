@@ -1,17 +1,17 @@
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
+<div class="accordion " id="accordion-styles">
+    <div style="background-color: rgb(241, 243, 248,0.05);" class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button style="background-color: rgb(214, 224, 240);" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Planets
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           
-            <p *ngFor="let planet of planets">
-                {{planet.id}}: {{planet.name}} <br>size: {{planet.size}},000 Kms
+            <app-planet-item *ngFor="let planet of planets" [planet]="planet">
                 
-            </p>
+                
+            </app-planet-item>
           
         </div>
       </div>
