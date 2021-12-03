@@ -1,18 +1,36 @@
+
+
 .main-div {
-    background-color: #D3D5FD;
+    /* background-color: rgb(214, 224, 240,0.3); */
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .inner-div {
-    background-color: #929AAB;
     border-radius: 1rem;
     padding: 1rem;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    
+}
+
+.main-container {
+    background-image: url(./darkmultiple.jpg);
+    background-size: cover;
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
