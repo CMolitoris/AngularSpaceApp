@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Planet } from 'src/app/Planet';
-import { PLANETS } from 'src/app/MockPlanets';
+import { PlanetService } from 'src/app/services/planet.service';
 
 @Component({
   selector: 'app-planets',
@@ -8,11 +8,12 @@ import { PLANETS } from 'src/app/MockPlanets';
   styleUrls: ['./planets.component.css']
 })
 export class PlanetsComponent implements OnInit {
-  planets: Planet[] = PLANETS;
+  planets: Planet[] = [];
 
-  constructor() { }
+  constructor(private planetService: PlanetService) { }
 
   ngOnInit(): void {
+    this.planetService.getPlanets().subscribe((planets) => this.planets = planets);
   }
 
 }
