@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { PlanetsComponent } from './components/planets/planets.component';
-
+import { HttpClientModule } from '@angular/common/http'
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PlanetItemComponent } from './components/planet-item/planet-item.component';
 
@@ -20,7 +20,7 @@ import { PlanetItemComponent } from './components/planet-item/planet-item.compon
   ],
   imports: [
     BrowserModule,
-    
+    HttpClientModule,
     
   ],
   providers: [],

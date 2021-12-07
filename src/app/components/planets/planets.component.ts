@@ -16,4 +16,12 @@ export class PlanetsComponent implements OnInit {
     this.planetService.getPlanets().subscribe((planets) => this.planets = planets);
   }
 
+  deletePlanet(planet: Planet ): void {
+    this.planetService
+      .deletePlanet(planet)
+      .subscribe(
+        () => this.planets = this.planets.filter(e => e.id !== planet.id)
+      );
+  }
+
 }

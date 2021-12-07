@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable,of } from 'rxjs';
 import { Planet } from 'src/app/Planet';
-import { PLANETS } from 'src/app/MockPlanets';
+// import { PLANETS } from 'src/app/MockPlanets';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlanetService {
-  
-  constructor() { }
+  private apiUrl = 'http://localhost:5000/planets';
+  constructor(private http:HttpClient) { }
 
   getPlanets(): Observable<Planet[]> {
-    const planets = of(PLANETS);
-    return planets;
+    return this.http.get<Planet[]>(this.apiUrl);
+  }
+
+  deletePlanet(planet: Planet): Observable<Planet> {
+    const url = `${this.apiUrl}/${planet.id}`;
+    return this.http.delete<Planet>(url);
   }
 }

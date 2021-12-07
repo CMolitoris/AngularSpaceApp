@@ -1,5 +1,7 @@
 <div class="planet-item-style">
-    <div><strong>{{planet.name}}</strong> <br>size: {{planet.size}},000 Kms</div>
+    <div>
+        <strong>{{planet.name}}</strong> <div style="float: right; margin-right: 1rem;"><i (click)="onDelete(planet)" class="fas fa-bacteria"></i></div> <br>size: {{planet.size}},000 Kms
+    </div>
     
     <div>
         <hr>
