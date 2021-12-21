@@ -9,6 +9,7 @@ import { Planet } from 'src/app/Planet';
 export class PlanetItemComponent implements OnInit {
   @Input() planet!: Planet;
   @Output() onDeletePlanet: EventEmitter<Planet> = new EventEmitter()
+  @Output() onTogglePlanet: EventEmitter<Planet> = new EventEmitter()
 
   constructor() { }
 
@@ -17,6 +18,10 @@ export class PlanetItemComponent implements OnInit {
 
   onDelete(planet: Planet): void {
     this.onDeletePlanet.emit(planet);
+  }
+
+  onToggle(planet: Planet) {
+    this.onTogglePlanet.emit(planet);
   }
 
 }

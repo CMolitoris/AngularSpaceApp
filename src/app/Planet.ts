@@ -3,4 +3,5 @@ export interface Planet {
     name: string;
     size: number;
     description: string;
+    large: boolean;
 }

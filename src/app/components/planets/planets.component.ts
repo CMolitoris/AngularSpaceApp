@@ -24,4 +24,9 @@ export class PlanetsComponent implements OnInit {
       );
   }
 
+  togglePlanet(planet: Planet): void {
+    planet.large = !planet.large;
+    this.planetService.togglePlanet(planet).subscribe();
+  }
+
 }

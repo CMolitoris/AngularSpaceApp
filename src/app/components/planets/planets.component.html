@@ -12,6 +12,7 @@
               *ngFor="let planet of planets" 
               [planet]="planet" 
               (onDeletePlanet)="deletePlanet(planet)"
+              (onTogglePlanet)="togglePlanet(planet)"
             ></app-planet-item>
           
         </div>
