@@ -1,6 +1,7 @@
 <div [ngClass]="{ isLarge: planet.large }" class="planet-item-style" (dblclick)="onToggle(planet)">
     <div>
         <strong>{{planet.name}}</strong> <div style="float: right; margin-right: 1rem;"><i (click)="onDelete(planet)" class="fas fa-bacteria"></i></div> <br>size: {{planet.size}},000 Kms
+        <app-favorite></app-favorite>
     </div>
     
     <div>

@@ -7,6 +7,7 @@ import { PlanetsComponent } from './components/planets/planets.component';
 import { HttpClientModule } from '@angular/common/http'
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PlanetItemComponent } from './components/planet-item/planet-item.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PlanetItemComponent } from './components/planet-item/planet-item.compon
     ButtonComponent,
     PlanetsComponent,
     NavBarComponent,
-    PlanetItemComponent
+    PlanetItemComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
