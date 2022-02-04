@@ -8,6 +8,9 @@ import { HttpClientModule } from '@angular/common/http'
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PlanetItemComponent } from './components/planet-item/planet-item.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { TitleCaseComponent } from './title-case/title-case.component';
+import { FormsModule } from '@angular/forms';
+import { TitlecasingPipe } from './titlecasing.pipe';
 
 
 @NgModule({
@@ -18,11 +21,14 @@ import { FavoriteComponent } from './favorite/favorite.component';
     PlanetsComponent,
     NavBarComponent,
     PlanetItemComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    TitleCaseComponent,
+    TitlecasingPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule
     
   ],
   providers: [],
